@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKY - The Best in Production</title>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          const uluru = { lat: -25.344, lng: 131.036 };
+          // The map, centered at Uluru
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+          });
+          // The marker, positioned at Uluru
+          const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+          });
+        }
+      </script>
+
+    <!--Bootstrap 4-->
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <!--Main CSS-->
+    <link rel="stylesheet" href="content\css\main.css">
+</head>
+<body>
+    <img class="main-img" src="content\img\back.gif">
+    
+    <div class="toggle"></div>
+    <div class="overlay"></div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="footer" class="row">
+        <div id="footer" class="col">
+            deneme
+        </div>
+    </div>
+
+    <div id="map">
+
+    </div>
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsR0E8GNP4wPhV4g06mxR-cPJmSfop0l0&callback=initMap">
+</script>
+
+    <script>
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active')
+                $('.overlay').toggleClass('active')
+                $('.menu').toggleClass('active')
+            })
+        })
+    </script>
+</body>
+</html>
